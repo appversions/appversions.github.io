@@ -1,0 +1,160 @@
+{% extends "ReconTemplateAppVersions.html" %}
+
+{% block title %} Table 8 - App Versions - ReCon: Take Control of Your Mobile Privacy: About Us{% end %}
+
+
+{% block active_appversions %}class="active"{% end %}
+ {% block body %}
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script src="stupidtable.js?dev"></script>
+<script>
+$(function(){
+$("table").stupidtable();
+});
+</script>
+
+<style type="text/css">
+table {
+border-collapse: collapse;
+}
+th, td {
+padding: 5px 10px;
+border: 0;
+}
+th {
+background-color: #eee;
+}
+th[data-sort]{
+cursor:pointer;
+}
+tr.awesome{
+color: red;
+}
+</style>
+
+</head>
+<body>
+<h3>Bug Fixes, Improvements, ..., and Privacy Leaks</h3>
+<h4>A Longitudinal Study of PII Leaks Across Android App Versions</h4>
+<br/>
+<h4 align="center">Table 9. High-risk tracking</h4>
+<p>Summary of domains that track non-ID PII along with unique ID. There are much more small-scale domains conducting
+high risk tracking than the well-know Google owned domains.  We group the following domains as
+    google[*]: google.com, googleapis.com, doubleclick.net, google-analytics.com, gstatic.com,
+    googleusercontent.com, googleadservices.com. </p>
+<a href="/appversions/details.html">Back to App Versions Details</a>
+<div class = "table-responsive">
+<table class="table table-striped" align="center" width = 50%>
+<thead>
+<tr>
+<th data-sort="string">Domain</th>
+<th data-sort="string">PII types leaked with ID</th>
+<th data-sort="int">#PII types</th>
+<th data-sort="int">#Apps</th>
+<th data-sort="int">#APKs</th>
+</tr>
+</thead>
+<tbody>
+    <tr><td>google[*]</td> <td>Location, Gender, First Name, Last Name, Email</td> <td>5</td> <td>133</td> <td>414</td> </tr>
+<tr><td>kochava.com</td> <td>Email, Gender</td> <td>2</td> <td>8</td> <td>36</td> </tr>
+<tr><td>vungle.com</td> <td>Gender, Location</td> <td>2</td> <td>7</td> <td>34</td> </tr>
+<tr><td>mopub.com</td> <td>Gender, Location</td> <td>2</td> <td>6</td> <td>13</td> </tr>
+<tr><td>doubleverify.com</td> <td>Location</td> <td>1</td> <td>5</td> <td>7</td> </tr>
+<tr><td>aerserv.com</td> <td>Location</td> <td>1</td> <td>4</td> <td>10</td> </tr>
+<tr><td>smartadserver.com</td> <td>Location</td> <td>1</td> <td>3</td> <td>7</td> </tr>
+<tr><td>aniview.com</td> <td>Location</td> <td>1</td> <td>3</td> <td>11</td> </tr>
+<tr><td>mmnetwork.mobi</td> <td>Location</td> <td>1</td> <td>3</td> <td>9</td> </tr>
+<tr><td>56txs4.com</td> <td>Gender</td> <td>1</td> <td>3</td> <td>11</td> </tr>
+<tr><td>omwpx.com</td> <td>Location</td> <td>1</td> <td>3</td> <td>9</td> </tr>
+<tr><td>pokkt.com</td> <td>Location, Gender</td> <td>2</td> <td>2</td> <td>3</td> </tr>
+<tr><td>goforandroid.com</td> <td>Email</td> <td>1</td> <td>2</td> <td>12</td> </tr>
+<tr><td>googlesyndication.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>5</td> </tr>
+<tr><td>hfddlhmcvfvbskge.com</td> <td>Email, Password, Gender, Location</td> <td>4</td> <td>2</td> <td>28</td> </tr>
+<tr><td>crashlytics.com</td> <td>PhoneNo., Email</td> <td>2</td> <td>2</td> <td>2</td> </tr>
+<tr><td>inner-active.mobi</td> <td>Location</td> <td>1</td> <td>2</td> <td>2</td> </tr>
+<tr><td>omqyioojvnwsmocx.com</td> <td>Email, Password, Gender, Location</td> <td>4</td> <td>2</td> <td>30</td> </tr>
+<tr><td>sololearn.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>11</td> </tr>
+<tr><td>ninthdecimal.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>4</td> </tr>
+<tr><td>my.com</td> <td>Location, Email, First Name, Last Name</td> <td>4</td> <td>2</td> <td>17</td> </tr>
+<tr><td>mediabrix.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>9</td> </tr>
+<tr><td>kiip.me</td> <td>Location</td> <td>1</td> <td>2</td> <td>9</td> </tr>
+<tr><td>meet24.com</td> <td>Location, Gender, Email, Password</td> <td>4</td> <td>2</td> <td>21</td> </tr>
+<tr><td>appboy.com</td> <td>Location, Email</td> <td>2</td> <td>2</td> <td>7</td> </tr>
+<tr><td>adsrvr.org</td> <td>Location</td> <td>1</td> <td>2</td> <td>2</td> </tr>
+<tr><td>applovin.com</td> <td>Gender, Location</td> <td>2</td> <td>2</td> <td>12</td> </tr>
+<tr><td>startappservice.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>8</td> </tr>
+<tr><td>yahoo.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>9</td> </tr>
+<tr><td>trulia.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>14</td> </tr>
+<tr><td>umeng.com</td> <td>Location</td> <td>1</td> <td>2</td> <td>10</td> </tr>
+<tr><td>textra.me</td> <td>Email</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>thefork.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>omniata.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>opensignal.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>10</td> </tr>
+<tr><td>xiti.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>8</td> </tr>
+<tr><td>yabidos.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>mobeam.net</td> <td>Gender</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>yahooapis.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>yumenetworks.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>tapsense.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>soundhound.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>openx.net</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>socialquantum.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>6</td> </tr>
+<tr><td>startappexchange.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>pinger.com</td> <td>PhoneNo., Gender, Location</td> <td>3</td> <td>1</td> <td>4</td> </tr>
+<tr><td>staircase3.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>pushwoosh.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>qbk1.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>sdkbox.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>servedbyopenx.com</td> <td>Location, Gender</td> <td>2</td> <td>1</td> <td>6</td> </tr>
+<tr><td>sponsorpay.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>smaato.net</td> <td>Location</td> <td>1</td> <td>1</td> <td>7</td> </tr>
+<tr><td>midomi.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>18</td> </tr>
+<tr><td>speedtest.net</td> <td>Location</td> <td>1</td> <td>1</td> <td>12</td> </tr>
+<tr><td>smule.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>2mdn.net</td> <td>Location</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>ksmobile.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>measurementapi.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>altitudeplatform.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>bfmio.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>audible.co.uk</td> <td>Email</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>atdmt.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>appsdc.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>4</td> </tr>
+<tr><td>appnext.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>angsrvr.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>amazonaws.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>aitype.net</td> <td>Email</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>branch.io</td> <td>Password</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>airpush.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>5</td> </tr>
+<tr><td>afftrx.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>adroll.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>adnxs.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>adjust.com</td> <td>Password</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>acekoala.com</td> <td>Gender</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>aarki.net</td> <td>Gender</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>bluemailapp.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>10</td> </tr>
+<tr><td>cloudflare.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>maxpedia.org</td> <td>Gender</td> <td>1</td> <td>1</td> <td>6</td> </tr>
+<tr><td>homes.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>27</td> </tr>
+<tr><td>loopme.me</td> <td>Location</td> <td>1</td> <td>1</td> <td>7</td> </tr>
+<tr><td>localytics.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>life360.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>5</td> </tr>
+<tr><td>ksmobile.net</td> <td>Location</td> <td>1</td> <td>1</td> <td>15</td> </tr>
+<tr><td>jquery.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>2</td> </tr>
+<tr><td>inmarket.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>ijinshan.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>7</td> </tr>
+<tr><td>glotgrx.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>cloudfront.net</td> <td>Gender</td> <td>1</td> <td>1</td> <td>6</td> </tr>
+<tr><td>fuelbuddy-app.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>10</td> </tr>
+<tr><td>fqtag.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>1</td> </tr>
+<tr><td>fastmeet.com</td> <td>Email, Password, Gender</td> <td>3</td> <td>1</td> <td>3</td> </tr>
+<tr><td>endomondo.com</td> <td>Password, Gender, Location</td> <td>3</td> <td>1</td> <td>3</td> </tr>
+<tr><td>easytaxi.com.br</td> <td>Location</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>damiapp.com</td> <td>Email</td> <td>1</td> <td>1</td> <td>3</td> </tr>
+<tr><td>continental.com</td> <td>Location</td> <td>1</td> <td>1</td> <td>9</td> </tr>
+<tr><td>zyngawithfriends.com</td> <td>Email, Password</td> <td>2</td> <td>1</td> <td>6</td> </tr>
+</tbody>
+</table>
+</div>
+{% end %}

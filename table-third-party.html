@@ -1,0 +1,244 @@
+{% extends "ReconTemplateAppVersions.html" %}
+
+{% block title %} Table 8 - App Versions - ReCon: Take Control of Your Mobile Privacy: About Us{% end %}
+
+
+{% block active_appversions %}class="active"{% end %}
+ {% block body %}
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script src="stupidtable.js?dev"></script>
+<script>
+$(function(){
+$("table").stupidtable();
+});
+</script>
+
+<style type="text/css">
+table {
+border-collapse: collapse;
+}
+th, td {
+padding: 5px 10px;
+border: 0;
+}
+th {
+background-color: #eee;
+}
+th[data-sort]{
+cursor:pointer;
+}
+tr.awesome{
+color: red;
+}
+</style>
+
+</head>
+<body>
+<h3>Bug Fixes, Improvements, ..., and Privacy Leaks</h3>
+<h4>A Longitudinal Study of PII Leaks Across Android App Versions</h4>
+<br/>
+
+<h4 align="center">Table 8. Third-party domain tracking</font></h4>
+<p>Third-party domains track mostly different unique identifiers and there is little correlation between the number of
+    contacted flows and the number of flows having PII. We group the following domains as
+    google[*]: google.com, googleapis.com, doubleclick.net, google-analytics.com, gstatic.com,
+    googleusercontent.com, googleadservices.com.</font></p>
+<a href="/appversions/details.html">Back to App Versions Details</a>
+<div class = "table-responsive">
+<table class="table table-striped" align="center" width = 50%>
+<thead>
+<tr>
+<th data-sort="string">Domain</th>
+<th data-sort="int">#Flows</th>
+<th data-sort="int">#PII leaks</th>
+<th data-sort="int">#Apps</th>
+<th data-sort="int">#APKs</th>
+<th data-sort="int">#PII types</th>
+<th data-sort="int">PII Types</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>google[*]</td><td>171899</td><td>26048</td><td>478</td><td>2848</td><td>11</td><td>HW Serial, Email, Location, IMEI, Ad ID, GSF ID, Android ID, Gender, MAC Addr., First Name, Last Name</td></tr>
+<tr><td>crashlytics.com</td><td>6713</td><td>1150</td><td>112</td><td>625</td><td>6</td><td>Ad ID, Android ID, PhoneNo., HW Serial, Email, IMEI</td></tr>
+<tr><td>vungle.com</td><td>1405</td><td>780</td><td>21</td><td>132</td><td>6</td><td>Ad ID, Android ID, HW Serial, MAC Addr., Gender, Location</td></tr>
+<tr><td>adjust.com</td><td>1185</td><td>642</td><td>30</td><td>172</td><td>6</td><td>Ad ID, Android ID, IMEI, Password, HW Serial, MAC Addr.</td></tr>
+<tr><td>supersonicads.com</td><td>791</td><td>613</td><td>9</td><td>36</td><td>6</td><td>Ad ID, HW Serial, IMEI, Android ID, MAC Addr., Location</td></tr>
+<tr><td>amazon-adsystem.com</td><td>1311</td><td>438</td><td>15</td><td>71</td><td>6</td><td>MAC Addr., HW Serial, Android ID, IMEI, Ad ID, Location</td></tr>
+<tr><td>kochava.com</td><td>633</td><td>338</td><td>21</td><td>80</td><td>6</td><td>Android ID, Ad ID, IMEI, Email, MAC Addr., Gender</td></tr>
+<tr><td>tapjoyads.com</td><td>5503</td><td>5390</td><td>43</td><td>440</td><td>5</td><td>Ad ID, Android ID, IMEI, HW Serial, MAC Addr.</td></tr>
+<tr><td>mopub.com</td><td>7568</td><td>3657</td><td>38</td><td>235</td><td>5</td><td>Ad ID, Android ID, Gender, Location, IMEI</td></tr>
+<tr><td>applovin.com</td><td>5591</td><td>2360</td><td>26</td><td>149</td><td>5</td><td>Ad ID, Android ID, IMEI, Gender, Location</td></tr>
+<tr><td>sponsorpay.com</td><td>6413</td><td>2272</td><td>13</td><td>141</td><td>5</td><td>Ad ID, Android ID, MAC Addr., IMEI, Location</td></tr>
+<tr><td>appsflyer.com</td><td>3925</td><td>2218</td><td>85</td><td>665</td><td>5</td><td>Android ID, Ad ID, IMEI, HW Serial, MAC Addr.</td></tr>
+<tr><td>applifier.com</td><td>981</td><td>622</td><td>18</td><td>132</td><td>5</td><td>Ad ID, HW Serial, IMEI, MAC Addr., Android ID</td></tr>
+<tr><td>ad-x.co.uk</td><td>607</td><td>562</td><td>7</td><td>62</td><td>5</td><td>IMEI, MAC Addr., Ad ID, HW Serial, Android ID</td></tr>
+<tr><td>w3i.com</td><td>580</td><td>547</td><td>6</td><td>33</td><td>5</td><td>Ad ID, HW Serial, MAC Addr., IMEI, Android ID</td></tr>
+<tr><td>umengcloud.com</td><td>546</td><td>344</td><td>10</td><td>83</td><td>5</td><td>HW Serial, MAC Addr., IMEI, Android ID, SIM ID</td></tr>
+<tr><td>fiksu.com</td><td>250</td><td>163</td><td>8</td><td>25</td><td>5</td><td>IMEI, Android ID, HW Serial, MAC Addr., Ad ID</td></tr>
+<tr><td>appboy.com</td><td>226</td><td>90</td><td>7</td><td>46</td><td>5</td><td>HW Serial, Location, Email, Ad ID, IMEI</td></tr>
+<tr><td>facebook.com</td><td>23038</td><td>4145</td><td>119</td><td>837</td><td>4</td><td>Ad ID, Email, Location, IMEI</td></tr>
+<tr><td>localytics.com</td><td>3091</td><td>2018</td><td>14</td><td>147</td><td>4</td><td>Ad ID, Android ID, Location, HW Serial</td></tr>
+<tr><td>parse.com</td><td>3427</td><td>983</td><td>4</td><td>20</td><td>4</td><td>IMEI, Password, Email, HW Serial</td></tr>
+<tr><td>mydas.mobi</td><td>612</td><td>374</td><td>15</td><td>61</td><td>4</td><td>IMEI, Ad ID, Android ID, Location</td></tr>
+<tr><td>goforandroid.com</td><td>466</td><td>217</td><td>2</td><td>18</td><td>4</td><td>Ad ID, Android ID, IMEI, Email</td></tr>
+<tr><td>segment.io</td><td>397</td><td>194</td><td>2</td><td>13</td><td>4</td><td>Location, PhoneNo., Email, Ad ID</td></tr>
+<tr><td>crittercism.com</td><td>1533</td><td>161</td><td>6</td><td>23</td><td>4</td><td>IMEI, Android ID, Location, Ad ID</td></tr>
+<tr><td>akamaihd.net</td><td>2068</td><td>128</td><td>4</td><td>16</td><td>4</td><td>IMEI, Android ID, HW Serial, MAC Addr.</td></tr>
+<tr><td>amazonaws.com</td><td>4710</td><td>45</td><td>8</td><td>26</td><td>4</td><td>Ad ID, Location, Email, IMEI</td></tr>
+<tr><td>appspot.com</td><td>358</td><td>30</td><td>6</td><td>14</td><td>4</td><td>IMEI, Password, Ad ID, Android ID</td></tr>
+<tr><td>flurry.com</td><td>4557</td><td>1385</td><td>74</td><td>763</td><td>3</td><td>Android ID, Ad ID, IMEI</td></tr>
+<tr><td>tapjoy.com</td><td>3822</td><td>1354</td><td>29</td><td>237</td><td>3</td><td>Ad ID, IMEI, Android ID</td></tr>
+<tr><td>omniata.com</td><td>1009</td><td>841</td><td>3</td><td>25</td><td>3</td><td>Ad ID, Gender, HW Serial</td></tr>
+<tr><td>umeng.com</td><td>2549</td><td>754</td><td>10</td><td>99</td><td>3</td><td>MAC Addr., IMEI, Location</td></tr>
+<tr><td>unity3d.com</td><td>2552</td><td>534</td><td>23</td><td>191</td><td>3</td><td>IMEI, Ad ID, Android ID</td></tr>
+<tr><td>tokenads.com</td><td>489</td><td>489</td><td>2</td><td>9</td><td>3</td><td>Android ID, MAC Addr., Ad ID</td></tr>
+<tr><td>pokkt.com</td><td>343</td><td>343</td><td>2</td><td>3</td><td>3</td><td>Location, Gender, Ad ID</td></tr>
+<tr><td>cloudfront.net</td><td>11935</td><td>302</td><td>2</td><td>15</td><td>3</td><td>Android ID, Gender, Ad ID</td></tr>
+<tr><td>nexage.com</td><td>380</td><td>287</td><td>9</td><td>20</td><td>3</td><td>Ad ID, MAC Addr., IMEI</td></tr>
+<tr><td>startappservice.com</td><td>1502</td><td>257</td><td>13</td><td>31</td><td>3</td><td>IMEI, Location, Ad ID</td></tr>
+<tr><td>yahoo.com</td><td>944</td><td>240</td><td>20</td><td>95</td><td>3</td><td>Ad ID, HW Serial, Password</td></tr>
+<tr><td>presage.io</td><td>293</td><td>231</td><td>38</td><td>59</td><td>3</td><td>Ad ID, MAC Addr., IMEI</td></tr>
+<tr><td>adcolony.com</td><td>1138</td><td>223</td><td>23</td><td>154</td><td>3</td><td>Ad ID, Android ID, IMEI</td></tr>
+<tr><td>kontagent.net</td><td>902</td><td>170</td><td>4</td><td>20</td><td>3</td><td>Ad ID, IMEI, Android ID</td></tr>
+<tr><td>mdotm.com</td><td>223</td><td>166</td><td>2</td><td>6</td><td>3</td><td>Ad ID, Android ID, IMEI</td></tr>
+<tr><td>servedbyopenx.com</td><td>164</td><td>164</td><td>3</td><td>20</td><td>3</td><td>Location, Gender, Ad ID</td></tr>
+<tr><td>smartadserver.com</td><td>370</td><td>148</td><td>5</td><td>33</td><td>3</td><td>Location, Ad ID, Android ID</td></tr>
+<tr><td>rayjump.com</td><td>631</td><td>145</td><td>12</td><td>27</td><td>3</td><td>Ad ID, IMEI, Android ID</td></tr>
+<tr><td>smaato.net</td><td>231</td><td>138</td><td>8</td><td>45</td><td>3</td><td>IMEI, Ad ID, Location</td></tr>
+<tr><td>adjust.io</td><td>285</td><td>126</td><td>10</td><td>30</td><td>3</td><td>Ad ID, Android ID, MAC Addr.</td></tr>
+<tr><td>startappexchange.com</td><td>200</td><td>126</td><td>9</td><td>39</td><td>3</td><td>Android ID, Location, Ad ID</td></tr>
+<tr><td>mmnetwork.mobi</td><td>113</td><td>113</td><td>4</td><td>10</td><td>3</td><td>Location, Ad ID, Android ID</td></tr>
+<tr><td>inner-active.mobi</td><td>197</td><td>79</td><td>7</td><td>28</td><td>3</td><td>Ad ID, Location, IMEI</td></tr>
+<tr><td>googlesyndication.com</td><td>18357</td><td>74</td><td>6</td><td>13</td><td>3</td><td>Ad ID, Location, Android ID</td></tr>
+<tr><td>openx.net</td><td>806</td><td>72</td><td>4</td><td>6</td><td>3</td><td>Location, Ad ID, Gender</td></tr>
+<tr><td>mobileapptracking.com</td><td>237</td><td>68</td><td>3</td><td>25</td><td>3</td><td>Ad ID, IMEI, MAC Addr.</td></tr>
+<tr><td>glympse.com</td><td>137</td><td>67</td><td>3</td><td>27</td><td>3</td><td>Password, First Name, Last Name</td></tr>
+<tr><td>lenzmx.com</td><td>126</td><td>55</td><td>19</td><td>29</td><td>3</td><td>Ad ID, Android ID, IMEI</td></tr>
+<tr><td>airpush.com</td><td>51</td><td>50</td><td>2</td><td>7</td><td>3</td><td>IMEI, Location, Ad ID</td></tr>
+<tr><td>measurementapi.com</td><td>95</td><td>40</td><td>10</td><td>14</td><td>3</td><td>Ad ID, Android ID, Gender</td></tr>
+<tr><td>tapsense.com</td><td>45</td><td>36</td><td>3</td><td>14</td><td>3</td><td>IMEI, Ad ID, Gender</td></tr>
+<tr><td>omwpx.com</td><td>34</td><td>34</td><td>4</td><td>10</td><td>3</td><td>Location, Ad ID, Android ID</td></tr>
+<tr><td>ioam.de</td><td>401</td><td>26</td><td>4</td><td>26</td><td>3</td><td>IMEI, Ad ID, Android ID</td></tr>
+<tr><td>adnxs.com</td><td>916</td><td>21</td><td>3</td><td>8</td><td>3</td><td>Gender, Ad ID, Location</td></tr>
+<tr><td>aarki.net</td><td>158</td><td>20</td><td>3</td><td>13</td><td>3</td><td>IMEI, Gender, Ad ID</td></tr>
+<tr><td>fqtag.com</td><td>35</td><td>20</td><td>9</td><td>13</td><td>3</td><td>Ad ID, Location, Android ID</td></tr>
+<tr><td>taobao.com</td><td>264</td><td>17</td><td>2</td><td>6</td><td>3</td><td>MAC Addr., HW Serial, Android ID</td></tr>
+<tr><td>paypal.com</td><td>76</td><td>17</td><td>2</td><td>4</td><td>3</td><td>Android ID, HW Serial, IMEI</td></tr>
+<tr><td>taptica.com</td><td>28</td><td>9</td><td>7</td><td>8</td><td>3</td><td>Ad ID, IMEI, Gender</td></tr>
+<tr><td>cloudflare.com</td><td>101</td><td>5</td><td>2</td><td>3</td><td>3</td><td>Location, Android ID, Ad ID</td></tr>
+<tr><td>adkmob.com</td><td>2852</td><td>1894</td><td>6</td><td>93</td><td>2</td><td>Ad ID, Android ID</td></tr>
+<tr><td>xiti.com</td><td>1447</td><td>1124</td><td>7</td><td>95</td><td>2</td><td>Location, Android ID</td></tr>
+<tr><td>bfmio.com</td><td>866</td><td>823</td><td>3</td><td>3</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>app-measurement.com</td><td>1250</td><td>453</td><td>48</td><td>192</td><td>2</td><td>Ad ID, HW Serial</td></tr>
+<tr><td>amplitude.com</td><td>313</td><td>182</td><td>6</td><td>44</td><td>2</td><td>Ad ID, Android ID</td></tr>
+<tr><td>56txs4.com</td><td>176</td><td>173</td><td>14</td><td>27</td><td>2</td><td>Gender, Ad ID</td></tr>
+<tr><td>aerserv.com</td><td>196</td><td>169</td><td>6</td><td>28</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>leanplum.com</td><td>324</td><td>167</td><td>3</td><td>12</td><td>2</td><td>MAC Addr., IMEI</td></tr>
+<tr><td>angsrvr.com</td><td>166</td><td>163</td><td>4</td><td>18</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>mobfox.com</td><td>182</td><td>138</td><td>3</td><td>23</td><td>2</td><td>IMEI, Ad ID</td></tr>
+<tr><td>adsafeprotected.com</td><td>1562</td><td>134</td><td>9</td><td>16</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>innovid.com</td><td>247</td><td>119</td><td>3</td><td>14</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>avocarrot.com</td><td>107</td><td>107</td><td>3</td><td>10</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>doubleverify.com</td><td>1142</td><td>100</td><td>13</td><td>23</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>loopme.me</td><td>143</td><td>93</td><td>5</td><td>28</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>branch.io</td><td>517</td><td>85</td><td>11</td><td>23</td><td>2</td><td>Ad ID, Android ID</td></tr>
+<tr><td>admarvel.com</td><td>284</td><td>84</td><td>6</td><td>31</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>mixpanel.com</td><td>1077</td><td>80</td><td>2</td><td>16</td><td>2</td><td>IMEI, Ad ID</td></tr>
+<tr><td>urbanairship.com</td><td>561</td><td>79</td><td>15</td><td>36</td><td>2</td><td>Location, Android ID</td></tr>
+<tr><td>streamrail.net</td><td>108</td><td>78</td><td>3</td><td>18</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>3g.cn</td><td>1677</td><td>77</td><td>4</td><td>45</td><td>2</td><td>Android ID, Ad ID</td></tr>
+<tr><td>apptentive.com</td><td>965</td><td>77</td><td>4</td><td>39</td><td>2</td><td>Android ID, PhoneNo.</td></tr>
+<tr><td>chartboost.com</td><td>4796</td><td>73</td><td>2</td><td>29</td><td>2</td><td>IMEI, Android ID</td></tr>
+<tr><td>acekoala.com</td><td>93</td><td>68</td><td>38</td><td>49</td><td>2</td><td>Gender, Ad ID</td></tr>
+<tr><td>scorecardresearch.com</td><td>3517</td><td>57</td><td>13</td><td>30</td><td>2</td><td>Ad ID, Android ID</td></tr>
+<tr><td>aniview.com</td><td>470</td><td>56</td><td>4</td><td>12</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>kiip.me</td><td>57</td><td>54</td><td>3</td><td>10</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>pushwoosh.com</td><td>210</td><td>47</td><td>4</td><td>18</td><td>2</td><td>Android ID, Location</td></tr>
+<tr><td>qq.com</td><td>621</td><td>46</td><td>3</td><td>16</td><td>2</td><td>IMEI, MAC Addr.</td></tr>
+<tr><td>appcelerator.net</td><td>47</td><td>46</td><td>2</td><td>22</td><td>2</td><td>MAC Addr., Android ID</td></tr>
+<tr><td>atdmt.com</td><td>152</td><td>40</td><td>11</td><td>21</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>mediabrix.com</td><td>73</td><td>37</td><td>2</td><td>9</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>pinterest.com</td><td>131</td><td>36</td><td>3</td><td>3</td><td>2</td><td>Android ID, Ad ID</td></tr>
+<tr><td>greystripe.com</td><td>67</td><td>33</td><td>2</td><td>5</td><td>2</td><td>Android ID, Ad ID</td></tr>
+<tr><td>celtra.com</td><td>556</td><td>26</td><td>8</td><td>15</td><td>2</td><td>Ad ID, Gender</td></tr>
+<tr><td>tlnk.io</td><td>62</td><td>26</td><td>6</td><td>12</td><td>2</td><td>IMEI, Ad ID</td></tr>
+<tr><td>woobi.com</td><td>128</td><td>25</td><td>2</td><td>13</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>imrworldwide.com</td><td>569</td><td>22</td><td>3</td><td>11</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>appnext.com</td><td>37</td><td>18</td><td>5</td><td>8</td><td>2</td><td>Ad ID, Gender</td></tr>
+<tr><td>fluentmobile.com</td><td>18</td><td>18</td><td>4</td><td>16</td><td>2</td><td>IMEI, Android ID</td></tr>
+<tr><td>iasds01.com</td><td>317</td><td>17</td><td>3</td><td>9</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>2mdn.net</td><td>2392</td><td>15</td><td>5</td><td>11</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>quantcount.com</td><td>44</td><td>15</td><td>3</td><td>15</td><td>2</td><td>Ad ID, Android ID</td></tr>
+<tr><td>ymtracking.com</td><td>31</td><td>13</td><td>7</td><td>9</td><td>2</td><td>Ad ID, IMEI</td></tr>
+<tr><td>qbk1.com</td><td>13</td><td>13</td><td>6</td><td>6</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>ninthdecimal.com</td><td>14</td><td>12</td><td>5</td><td>7</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>adrta.com</td><td>20</td><td>11</td><td>4</td><td>6</td><td>2</td><td>Ad ID, IMEI</td></tr>
+<tr><td>topclipcenter.com</td><td>15</td><td>10</td><td>2</td><td>2</td><td>2</td><td>Ad ID, IMEI</td></tr>
+<tr><td>adsrvr.org</td><td>241</td><td>9</td><td>4</td><td>4</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>altitudeplatform.com</td><td>11</td><td>9</td><td>2</td><td>2</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>afftrx.com</td><td>14</td><td>8</td><td>2</td><td>2</td><td>2</td><td>Ad ID, Location</td></tr>
+<tr><td>fbcdn.net</td><td>13750</td><td>6</td><td>2</td><td>4</td><td>2</td><td>Email, IMEI</td></tr>
+<tr><td>insightexpressai.com</td><td>441</td><td>6</td><td>3</td><td>6</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>inmobi.com</td><td>1051</td><td>3</td><td>2</td><td>2</td><td>2</td><td>Location, Ad ID</td></tr>
+<tr><td>lkqd.net</td><td>1638</td><td>1192</td><td>4</td><td>22</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>heyzap.com</td><td>1042</td><td>855</td><td>7</td><td>67</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>2o7.net</td><td>1972</td><td>524</td><td>2</td><td>19</td><td>1</td><td>IMEI</td></tr>
+<tr><td>gpshopper.com</td><td>838</td><td>506</td><td>47</td><td>203</td><td>1</td><td>Location</td></tr>
+<tr><td>dotomi.com</td><td>916</td><td>487</td><td>5</td><td>13</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>lfstmedia.com</td><td>496</td><td>373</td><td>11</td><td>19</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>spotxchange.com</td><td>504</td><td>237</td><td>5</td><td>10</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>crwdcntrl.net</td><td>435</td><td>236</td><td>3</td><td>14</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>fyber.com</td><td>2700</td><td>213</td><td>4</td><td>32</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>apsalar.com</td><td>187</td><td>117</td><td>3</td><td>15</td><td>1</td><td>Android ID</td></tr>
+<tr><td>rubiconproject.com</td><td>620</td><td>107</td><td>4</td><td>13</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>vdopia.com</td><td>141</td><td>97</td><td>2</td><td>3</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>tinyhoneybee.com</td><td>125</td><td>87</td><td>29</td><td>39</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>advertising.com</td><td>537</td><td>60</td><td>6</td><td>7</td><td>1</td><td>Location</td></tr>
+<tr><td>pubnative.net</td><td>104</td><td>60</td><td>4</td><td>9</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>agkn.com</td><td>276</td><td>43</td><td>9</td><td>14</td><td>1</td><td>Gender</td></tr>
+<tr><td>mediaplex.com</td><td>138</td><td>40</td><td>2</td><td>8</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>hiberniacdn.com</td><td>118</td><td>34</td><td>2</td><td>16</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>tbliab.net</td><td>39</td><td>28</td><td>2</td><td>9</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>apprevolve.com</td><td>41</td><td>27</td><td>20</td><td>26</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>admobclick.com</td><td>37</td><td>27</td><td>20</td><td>26</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>twitter.com</td><td>2018</td><td>25</td><td>4</td><td>5</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>krxd.net</td><td>1063</td><td>20</td><td>7</td><td>10</td><td>1</td><td>Gender</td></tr>
+<tr><td>leadbolt.net</td><td>36</td><td>20</td><td>4</td><td>7</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>rollbar.com</td><td>38</td><td>17</td><td>2</td><td>16</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>online-metrix.net</td><td>289</td><td>15</td><td>4</td><td>14</td><td>1</td><td>Android ID</td></tr>
+<tr><td>adsymptotic.com</td><td>71</td><td>15</td><td>2</td><td>4</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>doodlemobile.com</td><td>30</td><td>15</td><td>3</td><td>15</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>traktum.com</td><td>33</td><td>14</td><td>5</td><td>10</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>adbuddiz.com</td><td>18</td><td>14</td><td>2</td><td>4</td><td>1</td><td>Location</td></tr>
+<tr><td>king.com</td><td>17</td><td>14</td><td>8</td><td>9</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>vserv.mobi</td><td>29</td><td>13</td><td>2</td><td>2</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>btrll.com</td><td>211</td><td>12</td><td>2</td><td>3</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>onesignal.com</td><td>27</td><td>12</td><td>3</td><td>11</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>thirdpresence.com</td><td>11</td><td>11</td><td>2</td><td>5</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>go2cloud.org</td><td>55</td><td>10</td><td>4</td><td>5</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>glispa.com</td><td>32</td><td>10</td><td>6</td><td>8</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>bee7.com</td><td>10</td><td>10</td><td>2</td><td>8</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>convertro.com</td><td>45</td><td>8</td><td>2</td><td>8</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>sift.co</td><td>10</td><td>8</td><td>4</td><td>4</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>trksrv.com</td><td>9</td><td>8</td><td>7</td><td>8</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>serving-sys.com</td><td>872</td><td>6</td><td>2</td><td>3</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>atlassbx.com</td><td>25</td><td>6</td><td>2</td><td>2</td><td>1</td><td>Location</td></tr>
+<tr><td>vlcty.net</td><td>14</td><td>6</td><td>3</td><td>4</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>api-02.com</td><td>8</td><td>6</td><td>2</td><td>2</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>wecloud.io</td><td>85</td><td>5</td><td>2</td><td>4</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>atom-data.io</td><td>25</td><td>5</td><td>2</td><td>5</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>hxczzzw.com</td><td>8</td><td>5</td><td>2</td><td>3</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>trkn.us</td><td>8</td><td>4</td><td>2</td><td>2</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>yext.com</td><td>5</td><td>4</td><td>2</td><td>2</td><td>1</td><td>Location</td></tr>
+<tr><td>o5o4o6.com</td><td>10</td><td>3</td><td>2</td><td>3</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>resultsmedia.com</td><td>7</td><td>3</td><td>2</td><td>2</td><td>1</td><td>Ad ID</td></tr>
+<tr><td>craftlog.com</td><td>126</td><td>2</td><td>2</td><td>2</td><td>1</td><td>Android ID</td></tr>
+<tr><td>arrivalist.com</td><td>34</td><td>2</td><td>2</td><td>2</td><td>1</td><td>Ad ID</td></tr>
+</tbody>
+</table>
+</div>
+
+
+    {% end %}

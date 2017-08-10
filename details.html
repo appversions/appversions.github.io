@@ -1,0 +1,41 @@
+{% extends "ReconTemplateAppVersions.html" %}
+
+{% block title %}App Versions - ReCon: Take Control of Your Mobile Privacy: About Us{% end %}
+
+
+{% block active_appversions %}class="active"{% end %}
+ {% block body %}
+
+<br>
+
+<h3>Bug Fixes, Improvements, ..., and Privacy Leaks</h3>
+<h4>A Longitudinal Study of PII Leaks Across Android App Versions</h4>
+<br/>
+<p> The one task we do almost weekly is to update apps in our phones. How does that affect our privacy?
+    Is mobile privacy getting better or worse over time? In this paper, we address this question by
+    studying privacy leaks from historical and current versions of 527 popular Android apps,
+    covering 8,576 app releases over 8 years of app version history. Through automated and scripted interaction
+    with apps and analysis of the network traffic they generate on real mobile devices,
+    we identify how privacy changes over time for individual apps and in aggregate.
+    We find several trends that include increased collection of personally identifiable information (PII)
+    over time across most apps, slow adoption of HTTPS to secure the information sent to other parties,
+    and a large number of third parties being able to link user activ- ity and locations across apps.
+    Interestingly, while privacy is getting worse in aggregate, we find that the privacy risk of individual apps
+    varies greatly over time, and a substan- tial fraction of apps see little change or even improvement in privacy.
+    Given these trends, we propose metrics for quan- tifying privacy risk and for providing this risk assessment
+    proactively to help users balance the risks and benefits of installing new versions of apps.</p>
+
+
+
+<p>
+Following are complete versions of the tables referred in the <a href="/papers/appversion.pdf"> submitted paper</a>:
+<ul>
+    <li><a href="table-third-party.html" >Table 8. Third-party domain tracking </a> </li>
+    <li><a href="table-coleaks.html" >Table 9. High-risk tracking </a> </li>
+</ul>
+</p>
+
+The data and code will be available soon.
+<p>
+<span class="label label-important">Tool</span> Use our <a href="/appversions/tool.html">App Versions tool </a> to determine which versions has better privacy based on your privacy preferences. </p>
+    {% end %}
